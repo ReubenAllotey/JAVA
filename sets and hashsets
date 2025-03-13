@@ -1,0 +1,30 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.HashSet;
+
+
+public class Main {
+    public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+ Set<Integer> t= new HashSet<Integer>();
+ t.add(1);
+ t.add(2);
+ t.add(3);
+ t.add(4);
+ t.add(5);
+        //t.remove(2);
+        //t.clear();
+        t.size();
+        int a =t.size();
+
+  System.out.println(t);
+  System.out.println(a);
+
+
+
+
+    }
+}
