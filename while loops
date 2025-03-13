@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class whileloops {
+    public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+
+            System.out.println("Enter the number  you wish to enter: ");
+            int n = in.nextInt();
+            
+            
+            /*
+            Syntax
+            
+            while (condition){
+            
+            block of statements 
+            }
+            
+             */
+        
+        int  count=0;
+            while (n != 10) {
+                System.out.println("Type the number 10..");
+                System.out.println("Enter the number  you wish to enter: ");
+                n = in.nextInt();
+                count++;
+
+                System. out .println ("you tried "+count +"times");
+            }
+
+
+
+    }
+}
