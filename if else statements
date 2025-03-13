@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class ifelse {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        /* syntax
+        * if ( condition ){
+        * body of instructions
+        *
+        * } else {
+        *  another instruction
+        * }
+
+        * */
+
+        // to compare two strings we .equals
+
+        System.out.println("Enter  any word :");
+        String s = sc.nextLine();
+         if (s.equals("animals ")) {
+             System.out.println("You typed animals");
+         }else if (s.equals("cats ")) {
+             System.out.println("You typed cats");
+         }else if (s.equals("dogs ")) {
+             System.out.println("You typed dogs");
+         }else{
+             System.out.println("i can't find any word");
+         }
+
+// code for knust grading system
+
+        System.out.println("Enter your score :");
+         int score = sc.nextInt();
+         if (score >=70) {
+             System.out.println("You got "+score + " "+ "You had grade A ");
+         }else if (score >=60){
+             System.out.println("You got "+score + " "+"You had grade B ");
+
+         }else if (score >=50){
+             System.out.println("You got "+score +  "" +"You had grade C ");
+         }else if (score >=40){
+             System.out.println("You got "+score +" " +"You had grade D ");
+         }else{
+             System.out .println("You failed!");
+         }
+
+
+         //nested statements
+
+        System.out.println("Enter your age :");
+         int age = sc.nextInt();
+         if (age >= 18) {
+             System.out.println("Enter your favorite color :");
+             String color = sc.nextLine();
+             if (color.equals("red")) {
+                 System.out.println("Not my favorite color");
+             }else if (color.equals("blue")) {
+                 System.out.println("My favorite color");
+             }else{
+                 System.out.println("Nice color");
+             }
+         }else if (age >= 15){
+             System.out.println("Enter your favorite food:");
+             String food = sc.nextLine();
+             if (food.equals("kenkey ")) {
+                 System.out.println("My favorite food as well");
+             }else{
+                 System.out.println(" nice food");
+             }
+         }else if (age >= 10){
+             System.out.println("Enter your favorite game:");
+             String game = sc.nextLine();
+             if (game.equals("football")) {
+                 System.out.println("My favorite game as well");
+             }else{
+                 System.out.println("nice game");
+             }
+         }else{
+             System.out.println("under age :");
+         }
+
+
+    }
+}
