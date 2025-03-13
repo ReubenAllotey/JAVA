@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {//TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+
+        Scanner in = new Scanner(System.in);
+        String [] array = new String[5];
+         array [0]= "hello" ;
+         array [1]= "world" ;
+         array [2]= "color" ;
+         array [3]= "bob" ;
+         array [4]= "hello" ;
+
+   String n=array[0];
+   System.out.println(n);
+
+
+
+   int []x={1,3,5,4,6,7,8,3,6,8,3,5,7,5,3,4,2,4,5,6};
+   int ones=0,twos=0,threes=0 ,fours=0,fives=0 ,sixes=0, sevenes=0,eights=0;
+
+   for (int i = 0; i < x.length; i++) {
+       if(x[i]==1){
+           ones++;
+       }else if(x[i]==2){
+           twos++;
+       }else if(x[i]==3){
+           threes++;
+       }else if(x[i]==4){
+           fours++;
+       }else if(x[i]==5){
+           fives++;
+       }else if(x[i]==6){
+           sixes++;
+       }else if(x[i]==7){
+           sevenes++;
+       }else if(x[i]==8){
+           eights++;
+       }
+   }
+System.out.println( "the number of 1 is" + ones);
+   System.out.println("the number of 2 is" +twos);
+   System.out.println("the number of 3 is" +threes);
+   System.out.println("the number of 4 is" +fours);
+    System.out.println("the number of 5 is" +fives);
+    System.out.println("the number of 6 is" +sixes);
+    System.out.println("the number of 7 is" +sevenes);
+    System.out.println("the number of 8 is" + eights);
+    }
+}
