@@ -1,0 +1,33 @@
+import java.util.Scanner;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+
+Scanner scanner = new Scanner(System.in);
+System.out.println("Please enter a file name: ");
+String fileName = scanner.nextLine();
+
+
+int x;
+System.out.println("Please enter a positive integer: ");
+x = scanner.nextInt();
+ int y;
+ System.out.println("Please enter a  next positive integer: ");
+ y = scanner.nextInt();
+ int z = x * y;
+ System.out.println("The product  of " + x + " and " + y + " is " + z);
+
+
+  int scanned = scanner.nextInt ();
+ int V=Integer.parseInt(String.valueOf(scanned));
+        System.out.println();
+
+
+        scanner.close();
+
+
+
+
+
+    }
+}
