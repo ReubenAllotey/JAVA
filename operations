@@ -1,0 +1,25 @@
+public class Subtractions {
+    public static void main(String[] args) {
+
+        double a = 5;
+        double b = 3;
+        System.out.println(a - b);
+    double p=Math.pow(a, b);
+    System.out.println(p);
+
+        int x=27;
+        System.out.println(x - b);
+
+        int y=60;
+        int z=30;
+        int d=y-z;
+        System.out.println(z - d);
+
+
+
+
+
+
+
+    }
+}
