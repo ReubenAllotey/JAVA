@@ -1,0 +1,65 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import java.util.Scanner;
+
+public class GradingSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt for the number of students
+        System.out.print("Enter the number of students: ");
+        int numberOfStudents = scanner.nextInt();
+
+        // Arrays to store each student's data
+        int[] examScores = new int[numberOfStudents];
+        int[] assessmentScores = new int[numberOfStudents];
+        int[] feesPaid = new int[numberOfStudents];
+
+        // Input data for each student
+        for (int i = 0; i < numberOfStudents; i++) {
+            System.out.println("\nStudent " + (i + 1) + ":");
+            System.out.print("Enter exam score: ");
+            examScores[i] = scanner.nextInt();
+            System.out.print("Enter assessment score: ");
+            assessmentScores[i] = scanner.nextInt();
+            System.out.print("Enter fees paid: ");
+            feesPaid[i] = scanner.nextInt();
+        }
+
+        // Process and display results for each student
+        for (int i = 0; i < numberOfStudents; i++) {
+            System.out.println("\nResults for Student " + (i + 1) + ":");
+            processStudent(examScores[i], assessmentScores[i], feesPaid[i]);
+        }
+
+        scanner.close();
+    }
+
+    public static void processStudent(int examScore, int assessmentScore, int feesPaid) {
+        boolean examPassed = examScore >= 25;
+        boolean assessmentPassed = assessmentScore >= 15;
+        int totalScore = examScore + assessmentScore;
+        boolean condoned = totalScore == 39 && (examScore == 24 || assessmentScore == 14);
+        boolean fullyPaid = feesPaid >= 100;
+
+        // Display pass/fail status for each component
+        System.out.println("Exam: " + (examPassed ? "Passed" : "Failed"));
+        System.out.println("Assessment: " + (assessmentPassed ? "Passed" : "Failed"));
+
+        // Determine and display final result
+        if ((examPassed && assessmentPassed) || condoned) {
+            if (fullyPaid) {
+                System.out.println("Congratulations! You have been issued a certificate.");
+            } else {
+                System.out.println("You passed but have not paid your full fees. No certificate issued.");
+            }
+        } else {
+            if (!examPassed && !assessmentPassed) {
+                System.out.println("You failed both components and must repeat.");
+            } else {
+                System.out.println("You failed the course.");
+            }
+        }
+    }
+}
